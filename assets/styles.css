@@ -1,0 +1,242 @@
+/* General Styles*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+label {
+  font-family: "Bebas Neue", cursive;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.header__container {
+  height: 500px;
+  background-image: url("https://i.picsum.photos/id/653/2509/1673.jpg?hmac=FyGKup0jkF1OQ38Auws_u2cuUCBKbRc6rE04Z3d3CNo");
+  justify-content: center;
+  align-items: center;
+}
+
+.header__photo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+.header__img {
+  margin: 10px 10px 0 10px;
+  max-width: 80%;
+  max-height: 80%;
+  border: #fff solid 1px;
+  position: relative;
+  top: 50px;
+}
+.menu__icon {
+  display: none;
+}
+
+.menu__menu {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: rgb(192, 51, 51);
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: #fff;
+  border: #fff solid 1px;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.header__title {
+  position: relative;
+  z-index: 1;
+  left: 70px;
+  bottom: 30px;
+  color: #fff;
+}
+
+.header__subtitle {
+  font-size: 14px;
+  position: relative;
+  left: 70px;
+  z-index: 1;
+  bottom: 30px;
+  color: #fff;
+  font-weight: 800;
+  max-width: 80%;
+}
+
+/* menu Mobile*/
+
+#active {
+  display: none;
+}
+
+.menu__container {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#active:checked ~ .menu__container {
+  opacity: 1;
+  visibility: visible;
+}
+
+#active:checked ~ .menu__container .menu__cont {
+  transform: translateX(0%);
+}
+
+.menu__cont {
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+
+.menu__cont nav {
+  transform: translateY(15%);
+}
+
+.menu__cont nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #fff;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+
+.menu__cont nav a:hover {
+  border-left: 5px solid #ffc6c6;
+}
+
+.menu__cont label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*buttons*/
+.buttons {
+  font-size: 10px;
+  color: rgb(192, 51, 51);
+}
+
+.buttons__sections {
+  width: 90%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+buttons__next-group {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5px;
+  padding-right: 10px;
+}
+
+/*Section Bebe niñas*/
+.section__bebe-niñas,  .section__bebe-niñas {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.bebe-niñas__title {
+  text-decoration: underline;
+  text-align: center;
+  color: rgb(192, 51, 51);
+}
+.bebe-niñas__img{
+  margin-bottom: 10px;
+}
+
+.slider__bebe-niñas{
+    width: 100%;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider__bebe-niñas ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    list-style: none;
+    animation: slide 15s infinite alternate ease-in-out;
+    border: #ffc6c6 solid 1px;
+}
+
+.slider__bebe-niñas li{
+    width: 100%;
+}
+
+@keyframes slide{
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -1000%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+
+/*Section Bebe niños*/
+
+.slider__bebe-niños{
+  width: 100%;
+  position: relative;
+}
+
+.arrow{
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  .arrow:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+  }
+  .back{
+    left: 2%;
+    top: 2350px;
+  }
+
+  .forward{
+    right: 2%;
+    top: 2347px;
+  }
